@@ -112,7 +112,7 @@
         GAP_COEFFICIENT: 0.6,
         GRAVITY: 0.6,
         INITIAL_JUMP_VELOCITY: 12,
-        INVERT_FADE_DURATION: 12000,
+        INVERT_FADE_DURATION: 0,
         INVERT_DISTANCE: 700,
         MAX_BLINK_COUNT: 3,
         MAX_CLOUDS: 6,
@@ -254,6 +254,7 @@
                     document.querySelector('.icon').classList.add('icon-disabled');
                 }
             }.bind(this));
+            
         },
 
         /**
@@ -778,7 +779,9 @@
             this.distanceMeter.acheivement = false;
 
             this.tRex.update(100, Trex.status.CRASHED);
-
+            console.log(this.distanceMeter.getActualDistance(Math.ceil(this.highestScore)));
+            console.log(this.distanceMeter.getActualDistance(Math.ceil(this.distanceRan)));
+            
             // Game over panel.
             if (!this.gameOverPanel) {
                 this.gameOverPanel = new GameOverPanel(this.canvas,
@@ -792,6 +795,13 @@
             if (this.distanceRan > this.highestScore) {
                 this.highestScore = Math.ceil(this.distanceRan);
                 this.distanceMeter.setHighScore(this.highestScore);
+                localStorage.setItem("score", this.distanceMeter.getActualDistance(Math.ceil(this.highestScore)));
+                const namepopup = document.getElementById("name-pop");
+                if (!localStorage.getItem("name")) {
+                    namepopup.style.display = "block";
+                }else{
+                    console.log("fetch code");
+                }
             }
 
             // Reset the time clock.
@@ -2710,6 +2720,8 @@
 
 function onDocumentLoad() {
     new Runner('.interstitial-wrapper');
+    
 }
 
 document.addEventListener('DOMContentLoaded', onDocumentLoad);
+
