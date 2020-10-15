@@ -183,7 +183,9 @@
   display: inline-block;
   position: relative;
   width: 20px;
-  height: 100px; }
+  height: 100px;
+}
+
 
 .flip-clock-divider:first-child {
   width: 0; }
