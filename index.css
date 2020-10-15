@@ -27,7 +27,7 @@ html, body {
   height: 225px;
   border-radius: 25px;
   width: 300px;
-  z-index: 999;
+  z-index: 9999999999;
   background-color: white;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -97,7 +97,7 @@ a{
   flex-direction: column;
 }
 
-.game-buttons{
+.game-buttons, .game-buttons-mobile{
   width: 100%;
   display: flex;
   align-items: center;
@@ -105,6 +105,23 @@ a{
 }
 
 .game-buttons button{
+  outline: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(90deg, #26c785 0%, #38ef7d 100%);
+}
+
+
+.game-buttons-mobile button{
   outline: none;
   padding: 10px 25px;
   border-radius: 25px;
@@ -198,6 +215,10 @@ a{
   display: none;
 }
 
+.game-buttons-mobile{
+  display: none;
+}
+
 @media (max-width: 420px) {
   .suggested-left > #control-buttons, .suggested-right > #control-buttons {
     float: none;
@@ -288,5 +309,13 @@ a{
   }
   .flip-clock-divider.seconds .flip-clock-label {
     right: -105px;
+  }
+  .game-buttons{
+    visibility: hidden;
+  }
+  .game-buttons-mobile{
+    visibility: visible;
+    display: flex;
+    z-index: 9999999;
   }
 }

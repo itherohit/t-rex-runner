@@ -39,6 +39,10 @@
             <button id="nickname">Nickname</button>
             <button><a href="leaderboard.html">Leaderboard</a></button>
         </div>
+        <div class="game-buttons-mobile">
+            <button id="nickname-mob">Nickname</button>
+            <button><a href="leaderboard.html">Leaderboard</a></button>
+        </div>
     </div>
     <div class="enter-name" id="name-pop">
         <h1>Enter Nickname</h1>
@@ -70,7 +74,7 @@
     const namepopup = document.getElementById("name-pop");
     const nickname = document.getElementById("nickname");
     const body = document.getElementById("offline");
-    
+    const nicknamemob = document.getElementById("nickname-mob");
 
     namebtn.addEventListener('click', () => {
         if (name.value==="") {
@@ -83,6 +87,9 @@
         }
     });
     nickname.addEventListener('click', () => {
+        namepopup.style.display = "block";
+    })
+    nicknamemob.addEventListener('click', () => {
         namepopup.style.display = "block";
     })
     namebtn.addEventListener('touchstart', () => {
