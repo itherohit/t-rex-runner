@@ -96,7 +96,7 @@
     var IS_MOBILE = /Android/.test(window.navigator.userAgent) || IS_IOS;
 
     /** @const */
-    var IS_TOUCH_ENABLED = 'ontouchstart' in window;
+    var IS_TOUCH_ENABLED = 'ontoushstart' in window;
 
     /**
      * Default game configuration.

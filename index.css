@@ -120,13 +120,14 @@ a{
   background: linear-gradient(90deg, #26c785 0%, #38ef7d 100%);
 }
 
-.Time-remain{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+.flip-clock-divider .flip-clock-label {
+  position: absolute;
+  top: 7rem;
+  right: -86px;
   color: white;
-  margin-left: 25px;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: none;
 }
 
 #main-content{
@@ -272,5 +273,20 @@ a{
   .interstitial-wrapper img{
     width: 75%;
   }
-
+  .flip-clock-divider .flip-clock-label {
+    position: absolute;
+    top: 7rem;
+    font-size: 1.25rem;
+    right: -100px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: none;
+  }
+  .flip-clock-divider.minutes .flip-clock-label {
+    right: -110px;
+  }
+  .flip-clock-divider.seconds .flip-clock-label {
+    right: -105px;
+  }
 }
