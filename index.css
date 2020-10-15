@@ -139,7 +139,7 @@ a{
 
 .flip-clock-divider .flip-clock-label {
   position: absolute;
-  top: 7rem;
+  top: 5rem;
   right: -86px;
   color: white;
   font-weight: 700;
@@ -317,5 +317,7 @@ a{
     visibility: visible;
     display: flex;
     z-index: 9999999;
+    position: absolute;
+    top: 55vh;
   }
 }
