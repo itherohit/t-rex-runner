@@ -91,6 +91,19 @@
     nickname.addEventListener('click', () => {
         namepopup.style.display = "block";
     })
+    namebtn.addEventListener('touchstart', () => {
+        if (name.value==="") {
+            console.log("lkokk");
+        }else{
+            localStorage.setItem("name", name.value);
+            namepopup.style.display = "none";
+            console.log(localStorage.getItem("name"));
+            console.log(localStorage.getItem("score"));
+        }
+    });
+    nickname.addEventListener('touchstart', () => {
+        namepopup.style.display = "block";
+    })
 </script>
     
 </html>
